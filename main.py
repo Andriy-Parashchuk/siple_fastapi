@@ -29,6 +29,7 @@ def get_all_users(user_id: int):
             return user
 
 
-# @app.post('/users/create')
-# def create_user():
-#     return
+@app.post('/users/create')
+def create_user(user: User):
+    users.append(dict(user))
+    return users
