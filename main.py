@@ -23,7 +23,7 @@ def get_all_users():
 
 
 @app.get('/users/{user_id}')
-def get_all_users(user_id):
+def get_all_users(user_id: int):
     for user in users:
         if user['id'] == user_id:
             return user
